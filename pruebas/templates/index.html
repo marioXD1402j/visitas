@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Visitas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .content-container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="content-container">
+            <h1>Contador de Visitas</h1>
+            <p>Visitas: {{ visitas }}</p>
+            <p>Reinicios: {{ reinicios }}</p>
+            <form action="/aumentar" method="post">
+                <button type="submit" class="btn btn-custom">Aumentar Visitas +2</button>
+            </form>
+            <form action="/reiniciar" method="post" class="mt-2">
+                <button type="submit" class="btn btn-danger">Reiniciar Contador</button>
+            </form>
+            <form action="/incrementar" method="post" class="mt-2">
+                <div class="form-group">
+                    <label for="incremento">Incrementar Visitas:</label>
+                    <input type="number" class="form-control" id="incremento" name="incremento" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Incrementar</button>
+            </form>
+            <a href="/destruir_sesion" class="btn btn-secondary mt-3">Eliminar Sesión</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción del Futuro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 700px;
+        }
+        .result-container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .result-container h1 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+        .result-container p {
+            font-size: 1.2rem;
+            color: #333333;
+        }
+        .btn-back {
+            margin-top: 1rem;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-back:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="result-container">
+            <h1>Predicción del Futuro</h1>
+            <p class="lead">{{ mensaje }}</p>
+            <p class="lead">Actualmente trabaja como <strong>{{ profesion }}</strong>.</p>
+            <a href="/" class="btn btn-back btn-block">Volver al Formulario</a>
+        </div>
+    </div>
+</body>
+</html>
+
